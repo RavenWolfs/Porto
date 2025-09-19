@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #4a90e2; /* Aksen Biru */
+    --background-color: #1a1a2e; /* Biru Tua Gelap */
+    --card-bg-color: #162447; /* Biru Gelap untuk Kartu */
+    --text-color: #e0e0e0;
+    --header-text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 4rem 2rem;
+}
+
+h1, h2, h3 {
+    color: var(--header-text-color);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Header & Nav */
+header {
+    background: rgba(22, 36, 71, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+nav .logo h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Home Section */
+#home {
+    padding-top: 8rem; /* Offset for fixed header */
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.intro-text {
+    flex: 2;
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+}
+
+.intro-text h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.profile-pic {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-pic img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    object-fit: cover;
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.tech-stack {
+    margin-top: 1rem;
+}
+
+.tech-stack span {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+/* Experience Section */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 25px;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--background-color);
+    border: 4px solid var(--primary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.timeline-item:nth-child(odd)::after {
+    right: -10px;
+}
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skills-grid i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.skills-grid i:hover {
+    transform: scale(1.2);
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #3a7ac8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    background: var(--card-bg-color);
+}
+
+/* Styling untuk Ikon Sosial Media */
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Jarak antar ikon */
+}
+
+.social-icons a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    font-size: 1.4rem; /* Ukuran ikon */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color); /* Warna berubah saat disentuh mouse */
+    transform: scale(1.2); /* Ikon sedikit membesar saat disentuh */
+}
+
+/* Penyesuaian untuk ikon di Navigasi */
+nav .social-icons {
+    margin-left: 2rem; /* Beri jarak dari menu navigasi */
+}
+
+/* Penyesuaian untuk ikon di Footer */
+footer .social-icons {
+    justify-content: center; /* Posisikan ikon di tengah */
+    margin-bottom: 1rem; /* Beri jarak ke teks copyright */
+    font-size: 1.8rem; /* Buat ikon di footer sedikit lebih besar */
+}
