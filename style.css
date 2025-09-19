@@ -309,75 +309,99 @@ footer .social-icons {
 
 }
 
-/* ========================================= */
-/* CSS UNTUK TAMPILAN MOBILE (RESPONSIVE) */
-/* ========================================= */
+/* ================================================= */
+/* ## REVISI TOTAL CSS RESPONSIVE UNTUK MOBILE ## */
+/* ================================================= */
 
 @media (max-width: 768px) {
-    /* --- UMUM & TIPOGRAFI --- */
+    /* --- PENGATURAN GLOBAL --- */
+    body {
+        -webkit-text-size-adjust: 100%; /* Mencegah zoom otomatis font di iOS */
+    }
+
     .container {
-        padding: 2rem 1rem; /* Kurangi padding di sisi kiri-kanan */
+        padding-left: 1.5rem; /* Atur ulang padding agar lebih pas */
+        padding-right: 1.5rem;
     }
 
-    h1 {
-        font-size: 2rem; /* Perkecil ukuran judul utama */
+    /* --- HEADER & NAVIGASI --- */
+    header {
+        position: relative; /* PENTING: Ubah header agar tidak menempel di atas saat di-scroll */
+        padding: 1.5rem 0;
+        backdrop-filter: none; /* Hapus efek blur karena header tidak lagi melayang */
+        background: var(--card-bg-color); /* Beri warna solid */
     }
 
-    h2 {
-        font-size: 2rem; /* Perkecil ukuran judul section */
-    }
-
-    /* --- NAVIGASI --- */
     nav {
-        flex-direction: column; /* Susun logo, menu, dan ikon sosial secara vertikal */
-        gap: 1rem;
+        flex-wrap: wrap; /* Izinkan item untuk turun ke baris baru */
+        justify-content: space-between; /* Logo di kiri, ikon sosial di kanan */
+        row-gap: 1.5rem; /* Jarak jika item turun baris */
     }
 
     nav ul {
-        flex-direction: column; /* Susun item menu secara vertikal */
+        order: 3; /* Pindahkan menu ke baris paling bawah */
+        flex-direction: column; /* Susun menu secara vertikal */
+        width: 100%; /* Buat menu memenuhi lebar */
         align-items: center;
-        gap: 1rem;
-        margin-left: 0;
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav .logo {
+        order: 1; /* Logo di posisi pertama */
     }
     
     nav .social-icons {
+        order: 2; /* Ikon sosial di posisi kedua */
         margin-left: 0;
     }
 
     /* --- BAGIAN HOME --- */
     #home {
-        padding-top: 12rem; /* Beri ruang lebih karena navigasi lebih tinggi */
+        padding-top: 2rem; /* Atur ulang padding karena header tidak lagi fixed */
+        padding-bottom: 2rem;
     }
 
     .home-content {
-        flex-direction: column-reverse; /* Pindahkan gambar ke atas teks */
-        text-align: center; /* Ratakan teks ke tengah */
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .profile-pic img {
+        width: 200px; /* Sedikit perkecil gambar profil */
+        height: 200px;
     }
 
+    /* --- BAGIAN PROYEK --- */
+    .project-grid {
+        grid-template-columns: 1fr; /* Pastikan hanya ada satu kartu per baris */
+    }
+    
     /* --- BAGIAN TIMELINE PENGALAMAN --- */
     .timeline::after {
-        left: 31px; /* Pindahkan garis timeline ke kiri */
+        left: 20px; /* Geser garis timeline ke kiri */
     }
     
     .timeline-item {
-        width: 100%; /* Setiap item memenuhi lebar layar */
-        padding-left: 70px;
-        padding-right: 25px;
+        width: 100%;
+        padding-left: 50px; /* Beri ruang dari garis timeline */
+        padding-right: 10px;
     }
     
-    /* Posisikan semua item di sisi kanan garis */
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
         left: 0;
         text-align: left;
     }
-
+    
     .timeline-item::after {
-        left: 21px; /* Posisikan bulatan di atas garis timeline */
+        left: 11px; /* Posisikan titik tepat di atas garis */
     }
-
-    /* --- BAGIAN SKILLS --- */
-    .skills-grid i {
-        font-size: 3rem; /* Sedikit perkecil ikon skill */
+    
+    /* --- BAGIAN KONTAK --- */
+    .contact-form .btn {
+        width: 100%; /* Buat tombol memenuhi lebar agar mudah disentuh */
     }
 }
