@@ -103,11 +103,14 @@
         
         <section id="contact" class="container">
             <h2>Contact Me!</h2>
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Nama Anda" required>
-                <input type="email" name="email" placeholder="Email Anda" required>
-                <textarea name="message" placeholder="Pesan Anda" rows="5" required></textarea>
-                <button type="submit" class="btn">Kirim Pesan</button>
+            <form action="https://formsubmit.co/imaduddinrobi@gmail.com" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Nama Anda" required>
+            <input type="email" name="email" placeholder="Email Anda" required>
+            <textarea name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+    
+            <input type="hidden" name="_next" value="https://portoimad.vercel.app/terima-kasih.html">
+    
+            <button type="submit" class="btn">Kirim Pesan</button>
             </form>
         </section>
     </main>
@@ -120,3 +123,4 @@
 </body>
 
 </html>
+
