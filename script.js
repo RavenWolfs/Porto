@@ -10,12 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Mencegah form untuk refresh halaman saat disubmit (untuk demonstrasi)
-    const contactForm = document.querySelector('.contact-form');
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Pesan Anda telah "dikirim"! ');
-        contactForm.reset();
-    });
 
 });
+
