@@ -387,7 +387,7 @@ footer .social-icons {
     .timeline-item {
         width: 100%;
         padding-left: 50px; /* Beri ruang dari garis timeline */
-        padding-right: 10px;
+        padding-right: 20px;
     }
     
     .timeline-item:nth-child(odd),
@@ -397,7 +397,7 @@ footer .social-icons {
     }
     
     .timeline-item::after {
-        left: 20px; /* Posisikan titik tepat di atas garis */
+        left: 15px; /* Posisikan titik tepat di atas garis */
     }
     
     /* --- BAGIAN KONTAK --- */
@@ -405,5 +405,6 @@ footer .social-icons {
         width: 100%; /* Buat tombol memenuhi lebar agar mudah disentuh */
     }
 }
+
 
 
