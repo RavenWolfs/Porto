@@ -306,4 +306,78 @@ footer .social-icons {
     justify-content: center; /* Posisikan ikon di tengah */
     margin-bottom: 1rem; /* Beri jarak ke teks copyright */
     font-size: 1.8rem; /* Buat ikon di footer sedikit lebih besar */
+
+}
+
+/* ========================================= */
+/* CSS UNTUK TAMPILAN MOBILE (RESPONSIVE) */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    /* --- UMUM & TIPOGRAFI --- */
+    .container {
+        padding: 2rem 1rem; /* Kurangi padding di sisi kiri-kanan */
+    }
+
+    h1 {
+        font-size: 2rem; /* Perkecil ukuran judul utama */
+    }
+
+    h2 {
+        font-size: 2rem; /* Perkecil ukuran judul section */
+    }
+
+    /* --- NAVIGASI --- */
+    nav {
+        flex-direction: column; /* Susun logo, menu, dan ikon sosial secara vertikal */
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Susun item menu secara vertikal */
+        align-items: center;
+        gap: 1rem;
+        margin-left: 0;
+    }
+    
+    nav .social-icons {
+        margin-left: 0;
+    }
+
+    /* --- BAGIAN HOME --- */
+    #home {
+        padding-top: 12rem; /* Beri ruang lebih karena navigasi lebih tinggi */
+    }
+
+    .home-content {
+        flex-direction: column-reverse; /* Pindahkan gambar ke atas teks */
+        text-align: center; /* Ratakan teks ke tengah */
+    }
+
+    /* --- BAGIAN TIMELINE PENGALAMAN --- */
+    .timeline::after {
+        left: 31px; /* Pindahkan garis timeline ke kiri */
+    }
+    
+    .timeline-item {
+        width: 100%; /* Setiap item memenuhi lebar layar */
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    /* Posisikan semua item di sisi kanan garis */
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+        text-align: left;
+    }
+
+    .timeline-item::after {
+        left: 21px; /* Posisikan bulatan di atas garis timeline */
+    }
+
+    /* --- BAGIAN SKILLS --- */
+    .skills-grid i {
+        font-size: 3rem; /* Sedikit perkecil ikon skill */
+    }
 }
