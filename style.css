@@ -387,7 +387,7 @@ footer .social-icons {
     .timeline-item {
         width: 100%;
         padding-left: 50px; /* Beri ruang dari garis timeline */
-        padding-right: 15px;
+        padding-right: 20px;
     }
     
     .timeline-item:nth-child(odd),
@@ -405,6 +405,7 @@ footer .social-icons {
         width: 100%; /* Buat tombol memenuhi lebar agar mudah disentuh */
     }
 }
+
 
 
 
