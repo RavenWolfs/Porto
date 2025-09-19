@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.querySelector('.contact-form');
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        alert('Pesan Anda telah "dikirim"! (Ini hanya demo)');
+        alert('Pesan Anda telah "dikirim"! ');
         contactForm.reset();
     });
+
 });
