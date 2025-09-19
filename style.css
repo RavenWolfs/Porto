@@ -397,7 +397,7 @@ footer .social-icons {
     }
     
     .timeline-item::after {
-        left: 15px; /* Posisikan titik tepat di atas garis */
+        left: 20px; /* Posisikan titik tepat di atas garis */
     }
     
     /* --- BAGIAN KONTAK --- */
@@ -405,4 +405,5 @@ footer .social-icons {
         width: 100%; /* Buat tombol memenuhi lebar agar mudah disentuh */
     }
 }
+
 
